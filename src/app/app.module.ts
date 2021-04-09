@@ -7,18 +7,24 @@ import { UserComponent } from './user/user.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { TimerComponent } from './timer/timer.component';
-
+import { UserNameComponent } from './user-name/user-name.component';
+import { FormsModule } from '@angular/forms';
+import { DisabledDirective } from './disabled.directive';
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     LoginComponent,
     RegisterComponent,
-    TimerComponent
+    TimerComponent,
+    UserNameComponent,
+    DisabledDirective,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
