@@ -15,8 +15,10 @@ export class CreateComponent implements OnInit {
 
   onSubmit(form: NgForm){
     if(form.valid){
-      const course = form.value;
-      console.log(course);
+      const courseObj = form.value;
+      console.log(courseObj.title, courseObj.instructor, courseObj.isAvailable);
+
+      
       
     }
   }
