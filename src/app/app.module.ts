@@ -10,6 +10,10 @@ import { TimerComponent } from './timer/timer.component';
 import { UserNameComponent } from './user-name/user-name.component';
 import { FormsModule } from '@angular/forms';
 import { DisabledDirective } from './disabled.directive';
+import { HighlightwarningDirective } from './highlightwarning.directive';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { HeaderComponent } from './header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +23,10 @@ import { DisabledDirective } from './disabled.directive';
     TimerComponent,
     UserNameComponent,
     DisabledDirective,
+    HighlightwarningDirective,
+    HomeComponent,
+    AboutComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

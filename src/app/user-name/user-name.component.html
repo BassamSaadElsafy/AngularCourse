@@ -1,21 +1,33 @@
-<div class="row mt-3">
+<div class="row mt-3"  *ngIf="!isLoggedIn; else welcomeTemplate">
 
     <div class="col-md-8 ">
-        <input type="text" class="form-control "  placeholder="User name" [(ngModel)]="username"  [value]="username">
+        <input type="text" class="form-control "
+               placeholder="User name" 
+               [(ngModel)]="username"
+               [value]="username" 
+               appHighlightwarning >
 
     </div>
 
     <div class="col-md-4">
         
-        <input type="button" class="btn btn-outline-primary"   (click)="onClickBtn()" value="Submit" [attr.disabled]="username == '' ? '' : null">
+        <input type="button" 
+            class="btn btn-outline-primary"
+           (click)="onClickBtn()"  
+           value="Login"
+          [attr.disabled]="username == '' ? 'disabled' : null"
+          >
     
     </div>
 
-    <p>{{ username }}</p>
-
 </div>
 
+<ng-template #welcomeTemplate >
 
+    <p>
+        Welcome, <b>{{ username }}</b>
+    </p>
+        <input type="button" class="btn btn-outline-danger"    (click)="logout()" value="Logout">
+    
 
-
-
+</ng-template>

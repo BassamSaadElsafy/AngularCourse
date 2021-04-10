@@ -9,8 +9,18 @@ export class UserNameComponent {
 
   username: string = 'Bassam';
 
-  onClickBtn(){
+  isLoggedIn = false;
+
+  onClickBtn(): void{
+
+    this.isLoggedIn = true;
+    
+  }
+
+  logout(): void{
+    this.isLoggedIn = false;
     this.username = '';
+
   }
 
   constructor() { }
